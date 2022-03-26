@@ -15,4 +15,13 @@ export class CreatePermissionController {
 
     return response.json(result);
   }
+
+  async list(request: Request, response: Response) {
+    const createPermissionService = new CreatePermissionService();
+
+    const permissions = await createPermissionService.list();
+
+    return response.json(permissions);
+
+  }
 }

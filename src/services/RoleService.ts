@@ -6,7 +6,7 @@ type RoleRequest = {
   description: string;
 };
 
-export class CreateRoleService {
+export class RoleService {
   async execute({ name, description }: RoleRequest): Promise<Role | Error> {
     const repo = RoleRepository();
 
@@ -19,5 +19,17 @@ export class CreateRoleService {
     await repo.save(role);
 
     return role;
+  }
+  
+  async list(): Promise<Role[]> {
+    const roles = await RoleRepository().find();
+    return roles;
+  }
+  
+  async returnRoleIdByName(name): Promise<String> {
+    const role = await RoleRepository().findOne({ where:{
+      name: name
+    } });
+    return role.id;
   }
 }
