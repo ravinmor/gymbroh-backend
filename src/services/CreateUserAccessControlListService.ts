@@ -12,30 +12,28 @@ type UserACLRequest = {
 };
 
 export class CreateUserAccessControlListService {
-  async execute({
-    userId,
-    roles,
-    permissions,
-  }: UserACLRequest): Promise<User | Error> {
-    const repo = UserRepository();
+	async execute({
+		userId,
+		roles,
+		permissions,
+	}: UserACLRequest): Promise<User | Error> {
+		const repo = UserRepository();
 
-    const user = await repo.findOne(userId);
+		const user = await repo.findOne(userId);
 
-    if (!user) {
-      return new Error("User does not exists!");
-    }
+		if (!user) {
+			return new Error("User does not exists!");
+		}
 
-    const permissionsExists = await PermissionRepository().findByIds(
-      permissions
-    );
+		const permissionsExists = await PermissionRepository().findByIds(permissions);
 
-    const rolesExists = await RoleRepository().findByIds(roles);
+		const rolesExists = await RoleRepository().findByIds(roles);
 
-    user.permissions = permissionsExists;
-    user.roles = rolesExists;
+		user.permissions = permissionsExists;
+		user.roles = rolesExists;
 
-    repo.save(user);
+		repo.save(user);
 
-    return user;
-  }
+		return user;
+	}
 }

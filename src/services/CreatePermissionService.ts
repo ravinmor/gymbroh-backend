@@ -1,3 +1,4 @@
+import { Repository } from "typeorm";
 import { Permission } from "../entities/Permission";
 import { PermissionRepository } from "../repositories";
 
@@ -20,5 +21,10 @@ export class CreatePermissionService {
     await repo.save(permission);
 
     return permission;
+  }
+
+  async list(): Promise<Permission[]> {
+    const permissions = await PermissionRepository().find();
+    return permissions;
   }
 }
