@@ -58,7 +58,7 @@ $ git clone https://github.com/ravinmor/gymbroh-backend.git
 $ cd gymbroh-backend
 
 #Install packages
-$ cd gymbroh-backend
+$ yarn
 
 #Start the app
 $ yarn dev
@@ -67,13 +67,6 @@ $ yarn dev
 ```
 
 ## Technologies
-<div style="display: inline_block">
-  <img  align="center" alt="Ravin-Typescript" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-  <img align="center" alt="Ravin-Node" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
-  <img align="center" alt="Ravin-Express" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg">
-  <img align="center" alt="Ravin-PostgreSQL" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
-</div>
-<br/>
 <ul>
   <li>bcryptjs: 2.4.3</li>
   <li>cors: 2.8.5</li>
