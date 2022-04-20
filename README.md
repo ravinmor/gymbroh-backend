@@ -1,7 +1,10 @@
 # gymbroh-backend
 
-## Table of contents
+![Design sem nome (2)](https://user-images.githubusercontent.com/50897495/164308216-7205bbb3-7844-4b55-a471-d1d2e5be11a7.png)
 
+Gymbroh visual
+
+## Table of contents
 <ul>
   <li><a href="#about">About</a></li>
   <li><a href="#features">Features</a></li>
