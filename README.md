@@ -60,11 +60,17 @@ $ git clone https://github.com/ravinmor/gymbroh-backend.git
 #Access the backend app folder
 $ cd gymbroh-backend
 
-#Install packages
-$ yarn
+#Run the container
+$ docker-compose up --build
 
-#Start the app
-$ yarn dev
+#I am still workink in improve the docker file, it is still necessary to run migrations and seed manually
+$ docker exec -t <containar-id> /bin/sh
+
+#Run migrations
+$ yarn typeorm:migrate
+
+#Run seeding
+$ yarn seed
 
 # The server wil run on port:3333 - Access <http://localhost:3333>
 ```
