@@ -6,7 +6,7 @@
   "scripts": {
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
     "dev": "ts-node-dev src/server.ts",
-    "typeorm:migrate": "ts-node-dev typeorm migration:run",
+    "typeorm:migrate": "typeorm migration:run",
     "typeorm:revert": "ts-node-dev typeorm migration:revert",
     "seed": "ts-node-dev src/database/seeds/exercises/index.ts"
   },
